@@ -58,7 +58,7 @@ def run_javascript_tests() -> bool:
         return True
 
     cmd = ["node", "--test", str(test_file)]
-    res = subprocess.run(cmd, cwd=str(ROOT_DIR), shell=True)
+    res = subprocess.run(cmd, cwd=str(ROOT_DIR), shell=(os.name == "nt"))
     return res.returncode == 0
 
 def run_cpp_tests() -> bool:
@@ -71,7 +71,7 @@ def run_cpp_tests() -> bool:
         return True
 
     compile_cmd = ["g++", "-std=c++14", "-O2", str(test_file), "-o", str(out_exe)]
-    comp_res = subprocess.run(compile_cmd, cwd=str(ROOT_DIR), shell=True)
+    comp_res = subprocess.run(compile_cmd, cwd=str(ROOT_DIR), shell=(os.name == "nt"))
     if comp_res.returncode != 0:
         print("  [FAIL] C++ compilation failed.")
         return False
