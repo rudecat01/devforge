@@ -1,0 +1,23 @@
+{
+  "name": "devforge",
+  "version": "0.1.0",
+  "description": "Small tools. Better workflows.",
+  "scripts": {
+    "test": "node --test tests/javascript/*.test.js",
+    "validate": "python scripts/validate.py"
+  },
+  "keywords": [
+    "developer-tools",
+    "cli",
+    "git",
+    "benchmarking",
+    "automation",
+    "utilities"
+  ],
+  "author": "rudecat01 <dhruvchaudhary13978@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rudecat01/devforge.git"
+  }
+}

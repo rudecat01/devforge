@@ -1,0 +1,43 @@
+name: Documentation Link Check
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "*.md"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "*.md"
+  workflow_dispatch:
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan file paths and internal links
+        run: |
+          python -c "
+          import re, sys
+          from pathlib import Path
+
+          md_files = list(Path('.').glob('**/*.md'))
+          errors = 0
+          for md in md_files:
+              text = md.read_text(encoding='utf-8')
+              links = re.findall(r'\[.*?\]\((?!http)(.*?)\)', text)
+              for link in links:
+                  clean = link.split('#')[0]
+                  if clean and not (md.parent / clean).exists():
+                      print(f'Broken link in {md}: {link}')
+                      errors += 1
+          sys.exit(1 if errors > 0 else 0)
+          "

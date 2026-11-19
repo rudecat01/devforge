@@ -1,0 +1,101 @@
+{
+  "last_run": null,
+  "tasks": [
+    {
+      "id": "docs-tools-index-sync",
+      "type": "docs",
+      "status": "pending",
+      "title": "Synchronize tools index and capability reference",
+      "target_file": "docs/tools-index.md",
+      "description": "Ensure all newly added tools are indexed with their flags and usage examples."
+    },
+    {
+      "id": "test-edge-cases-commit-formatter",
+      "type": "test",
+      "status": "pending",
+      "title": "Add edge-case tests for git commit formatter emoji and multi-line footer parsing",
+      "target_file": "tests/python/test_git_tools.py",
+      "description": "Expand git tools test coverage for multi-paragraph bodies and issue trailers."
+    },
+    {
+      "id": "perf-benchmark-hashing-expansion",
+      "type": "perf",
+      "status": "pending",
+      "title": "Add buffer size tuning benchmarks to duplicate file finder",
+      "target_file": "tools/python/duplicate_finder.py",
+      "description": "Optimize chunk read sizes and document I/O throughput."
+    },
+    {
+      "id": "docs-architecture-diagram-refresh",
+      "type": "docs",
+      "status": "pending",
+      "title": "Refresh architectural ASCII workflow diagrams in getting started guide",
+      "target_file": "docs/getting-started.md",
+      "description": "Provide visual end-to-end flow diagrams for multi-language test executions."
+    },
+    {
+      "id": "ci-matrix-validation-refinement",
+      "type": "ci",
+      "status": "pending",
+      "title": "Enhance CI workflow test reporters and cache configurations",
+      "target_file": ".github/workflows/ci.yml",
+      "description": "Add pip caching and node dependency cache layers to speed up CI runs."
+    },
+    {
+      "id": "tools-env-validator-regex-types",
+      "type": "feat",
+      "status": "pending",
+      "title": "Add URL and email regex validation to JavaScript env validator",
+      "target_file": "tools/javascript/env_validator.js",
+      "description": "Support optional format checks like URL and EMAIL in .env.example definitions."
+    },
+    {
+      "id": "docs-security-and-attribution-guide",
+      "type": "docs",
+      "status": "pending",
+      "title": "Document personal GitHub contribution attribution practices",
+      "target_file": "docs/automation-guide.md",
+      "description": "Elaborate on how GitHub credits personal commits via verified author emails."
+    },
+    {
+      "id": "test-json-toolkit-empty-arrays",
+      "type": "test",
+      "status": "pending",
+      "title": "Add test cases for empty arrays in JSON toolkit flattener",
+      "target_file": "tests/python/test_productivity_tools.py",
+      "description": "Ensure edge case handling for empty list and deeply nested dictionary keys."
+    },
+    {
+      "id": "perf-cpp-input-generator-fast-io",
+      "type": "perf",
+      "status": "pending",
+      "title": "Add fast I/O optimizations to C++ input generator",
+      "target_file": "tools/cpp/input_generator.cpp",
+      "description": "Incorporate std::ios_base::sync_with_stdio(false) for large test case generation."
+    },
+    {
+      "id": "docs-contributing-guide-enhancement",
+      "type": "docs",
+      "status": "pending",
+      "title": "Enhance contributing standards for multi-language PR reviews",
+      "target_file": "CONTRIBUTING.md",
+      "description": "Clarify linting, format checks, and testing commands for PR authors."
+    },
+    {
+      "id": "chore-audit-gitignore-patterns",
+      "type": "chore",
+      "status": "pending",
+      "title": "Audit gitignore patterns for compiled binaries and temporary test artifacts",
+      "target_file": ".gitignore",
+      "description": "Verify coverage for temporary cache folders across Windows and Unix platforms."
+    },
+    {
+      "id": "feat-api-tester-custom-headers",
+      "type": "feat",
+      "status": "pending",
+      "title": "Add bearer auth header shorthand flag to JavaScript API tester",
+      "target_file": "tools/javascript/api_tester.js",
+      "description": "Allow quick --bearer flag authentication in CLI HTTP checks."
+    }
+  ]
+}
