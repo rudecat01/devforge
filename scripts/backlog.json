@@ -1,13 +1,14 @@
 {
-  "last_run": null,
+  "last_run": "2026-11-20T22:45:50.376583",
   "tasks": [
     {
       "id": "docs-tools-index-sync",
       "type": "docs",
-      "status": "pending",
+      "status": "completed",
       "title": "Synchronize tools index and capability reference",
       "target_file": "docs/tools-index.md",
-      "description": "Ensure all newly added tools are indexed with their flags and usage examples."
+      "description": "Ensure all newly added tools are indexed with their flags and usage examples.",
+      "completed_at": "2026-11-20T22:45:50.368877"
     },
     {
       "id": "test-edge-cases-commit-formatter",
