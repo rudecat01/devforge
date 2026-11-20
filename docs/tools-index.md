@@ -59,3 +59,5 @@ A comprehensive reference for all CLI utilities and libraries included in DevFor
   });
   suite.print_summary();
   ```
+
+<!-- last_synced: 2026-11-20T22:45:49.084253 -->
