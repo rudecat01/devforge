@@ -39,3 +39,8 @@ def test_format_commit_message():
     assert "BREAKING CHANGE:" in formatted
     assert "Detailed description" in formatted
     assert "Closes #42" in formatted
+
+def test_multiline_footer_support():
+    msg = 'chore(ci): update release matrix\n\nSigned-off-by: DevForge Bot'
+    valid, _ = validate_commit_message(msg)
+    assert valid is True
