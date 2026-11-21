@@ -64,3 +64,5 @@ node tools/javascript/env_validator.js --env .env --example .env.example
 ```bash
 python tools/productivity/code_stats.py .
 ```
+
+<!-- verified architecture flow on 2026-11-21 -->
