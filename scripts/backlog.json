@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-20T22:45:50.376583",
+  "last_run": "2026-11-21T21:48:41.667733",
   "tasks": [
     {
       "id": "docs-tools-index-sync",
@@ -13,10 +13,11 @@
     {
       "id": "test-edge-cases-commit-formatter",
       "type": "test",
-      "status": "pending",
+      "status": "completed",
       "title": "Add edge-case tests for git commit formatter emoji and multi-line footer parsing",
       "target_file": "tests/python/test_git_tools.py",
-      "description": "Expand git tools test coverage for multi-paragraph bodies and issue trailers."
+      "description": "Expand git tools test coverage for multi-paragraph bodies and issue trailers.",
+      "completed_at": "2026-11-21T21:48:39.503889"
     },
     {
       "id": "perf-benchmark-hashing-expansion",
@@ -29,10 +30,11 @@
     {
       "id": "docs-architecture-diagram-refresh",
       "type": "docs",
-      "status": "pending",
+      "status": "completed",
       "title": "Refresh architectural ASCII workflow diagrams in getting started guide",
       "target_file": "docs/getting-started.md",
-      "description": "Provide visual end-to-end flow diagrams for multi-language test executions."
+      "description": "Provide visual end-to-end flow diagrams for multi-language test executions.",
+      "completed_at": "2026-11-21T21:48:41.661289"
     },
     {
       "id": "ci-matrix-validation-refinement",
