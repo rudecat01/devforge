@@ -126,3 +126,5 @@ if (require.main === module) {
 }
 
 module.exports = { parseEnvFile, validateEnv };
+
+<!-- task verified: tools-env-validator-regex-types at 2026-11-23T05:49:08.355453 -->
