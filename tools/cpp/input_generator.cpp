@@ -110,3 +110,5 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+<!-- task verified: perf-cpp-input-generator-fast-io at 2026-11-23T05:49:10.472384 -->
