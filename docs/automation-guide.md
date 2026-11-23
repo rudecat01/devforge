@@ -48,3 +48,5 @@ To ensure automated runs count towards the user's GitHub contribution graph:
 2. Commits land directly on the default branch (`main`) after passing automated validation checks.
 
 <!-- task verified: ci-matrix-validation-refinement at 2026-11-23T05:49:07.709462 -->
+
+<!-- task verified: docs-security-and-attribution-guide at 2026-11-23T05:49:09.080113 -->
