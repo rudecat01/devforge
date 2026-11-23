@@ -114,8 +114,11 @@ def execute_task(task: dict) -> bool:
             py_file.write_text(cleaned, encoding="utf-8")
         return True
 
-    # Generic documentation or task update
-    target = ROOT_DIR / task.get("target_file", "docs/automation-log.md")
+    # Generic documentation or task update (never modify .github/ files in automated runs)
+    target_rel = task.get("target_file", "docs/automation-log.md")
+    if target_rel.startswith(".github"):
+        target_rel = "docs/automation-log.md"
+    target = ROOT_DIR / target_rel
     if target.exists():
         content = target.read_text(encoding="utf-8")
         content += f"\n<!-- task verified: {task_id} at {datetime.now().isoformat()} -->\n"

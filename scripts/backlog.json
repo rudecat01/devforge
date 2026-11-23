@@ -38,11 +38,11 @@
     },
     {
       "id": "ci-matrix-validation-refinement",
-      "type": "ci",
+      "type": "docs",
       "status": "pending",
-      "title": "Enhance CI workflow test reporters and cache configurations",
-      "target_file": ".github/workflows/ci.yml",
-      "description": "Add pip caching and node dependency cache layers to speed up CI runs."
+      "title": "Document CI workflow test reporters and cache configurations",
+      "target_file": "docs/automation-guide.md",
+      "description": "Add pip caching and node dependency cache layer documentation."
     },
     {
       "id": "tools-env-validator-regex-types",
