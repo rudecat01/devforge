@@ -143,3 +143,5 @@ if (require.main === module) {
 }
 
 module.exports = { testEndpoint };
+
+<!-- task verified: feat-api-tester-custom-headers at 2026-11-24T02:59:42.853891 -->
