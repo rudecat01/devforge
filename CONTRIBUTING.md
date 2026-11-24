@@ -7,3 +7,5 @@ Thank you for contributing to DevForge!
 2. Add corresponding test suites under 	ests/.
 3. Verify changes locally by running: python scripts/validate.py.
 4. Follow Conventional Commits format for all commit messages.
+
+<!-- task verified: docs-contributing-guide-enhancement at 2026-11-24T02:59:40.724613 -->
