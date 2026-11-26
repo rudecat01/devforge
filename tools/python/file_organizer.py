@@ -37,7 +37,7 @@ def organize_directory(
         raise ValueError(f"Target path does not exist or is not a directory: {target_dir}")
 
     actions = []
-    
+
     # We ignore our target category subdirectories to prevent nested moving
     category_dirs = set(CATEGORY_MAPPINGS.keys()) | {"other"}
 
