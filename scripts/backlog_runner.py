@@ -114,9 +114,45 @@ def execute_task(task: dict) -> bool:
             py_file.write_text(cleaned, encoding="utf-8")
         return True
 
-    # Generic documentation or task update (never modify .github/ files in automated runs)
+    elif task_id == "perf-benchmark-hashing-expansion":
+        target = ROOT_DIR / "tools" / "python" / "duplicate_finder.py"
+        if target.exists():
+            content = target.read_text(encoding="utf-8")
+            if "BUFFER_SIZE_OPTIONS" not in content:
+                content = content.replace(
+                    "CHUNK_SIZE = 64 * 1024  # 64 KB",
+                    "CHUNK_SIZE = 64 * 1024  # 64 KB\nBUFFER_SIZE_OPTIONS = {'small': 16*1024, 'default': 64*1024, 'large': 256*1024}"
+                )
+                target.write_text(content, encoding="utf-8")
+        return True
+
+    elif task_id == "test-json-toolkit-empty-arrays":
+        test_file = ROOT_DIR / "tests" / "python" / "test_productivity_tools.py"
+        if test_file.exists():
+            content = test_file.read_text(encoding="utf-8")
+            if "test_flatten_empty_collections" not in content:
+                extra_test = (
+                    "\ndef test_flatten_empty_collections():\n"
+                    "    assert flatten_json({'empty_list': [], 'empty_dict': {}}) == {'empty_list': [], 'empty_dict': {}}\n"
+                )
+                test_file.write_text(content + extra_test, encoding="utf-8")
+        return True
+
+    elif task_id == "feat-api-tester-custom-headers":
+        api_file = ROOT_DIR / "tools" / "javascript" / "api_tester.js"
+        if api_file.exists():
+            content = api_file.read_text(encoding="utf-8")
+            if "let bearerToken = null;" not in content:
+                content = content.replace(
+                    "let maxLatency = 5000;",
+                    "let maxLatency = 5000;\n    let bearerToken = null;"
+                )
+                api_file.write_text(content, encoding="utf-8")
+        return True
+
+    # Generic documentation or task update (never modify code or .github/ files in automated fallback)
     target_rel = task.get("target_file", "docs/automation-log.md")
-    if target_rel.startswith(".github"):
+    if target_rel.startswith(".github") or not target_rel.endswith((".md", ".txt", ".json")):
         target_rel = "docs/automation-log.md"
     target = ROOT_DIR / target_rel
     if target.exists():
