@@ -61,3 +61,5 @@ A comprehensive reference for all CLI utilities and libraries included in DevFor
   ```
 
 <!-- last_synced: 2026-11-20T22:45:49.084253 -->
+
+<!-- last_code_stats_audit: 2026-11-26 -->
