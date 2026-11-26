@@ -13,6 +13,7 @@ from pathlib import Path
 from collections import defaultdict
 
 CHUNK_SIZE = 64 * 1024  # 64 KB
+BUFFER_SIZE_OPTIONS = {'small': 16*1024, 'default': 64*1024, 'large': 256*1024}
 
 def compute_file_hash(filepath: Path) -> str:
     """Compute SHA-256 hash of a file reading in chunks."""
