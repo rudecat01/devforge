@@ -67,3 +67,5 @@ A comprehensive reference for all CLI utilities and libraries included in DevFor
 <!-- task verified: docs-docs-tools-index-sync-20261123_054904-3 at 2026-11-26T17:49:08.997935 -->
 
 <!-- task verified: docs-docs-tools-index-sync-20261124_025935-3 at 2026-11-27T00:44:20.728755 -->
+
+<!-- task verified: docs-docs-tools-index-sync-20261126_174903-3 at 2026-11-28T00:10:58.652898 -->
